@@ -14,13 +14,13 @@ public:
 private:
 	int		_cores;
 	int		_i_working_thread;
-	Kernel	_kernel;
-	cv::Mat _blurImage, _image;
+	Kernel		_kernel;
+	cv::Mat 	_blurImage, _image;
 
 
 	void	applyFilter		(cv::Mat image_src, cv::Mat image_dst, Kernel filter, int row_start, int row_end);
 	void	cvtToGray		(cv::Mat image_src);
-	void	threadFunction	(int row_start, int row_end);
+	void	threadFunction		(int row_start, int row_end);
 	Kernel	getGaussian		(int kernel_radius);
 };
 
