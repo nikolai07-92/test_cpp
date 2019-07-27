@@ -1,0 +1,8 @@
+SET(CMAKE_CXX_FLAGS "-std=c++0x")
+SET(CMAKE_CXX_STANDARD 11)
+add_compile_options(-pthread)
+cmake_minimum_required(VERSION 2.8)
+project( HR_cpp )
+find_package( OpenCV REQUIRED )
+add_executable( HR_cpp main.cpp ImageProcessing.cpp )
+target_link_libraries( HR_cpp ${OpenCV_LIBS} pthread)
