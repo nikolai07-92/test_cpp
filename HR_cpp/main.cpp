@@ -16,8 +16,8 @@ int main(int argc, char** argv)
 	}
 	//check second param
 	if (argc > 2) {
-        threads = atoi(argv[2]);
-    }
+        	threads = atoi(argv[2]);
+    	}
 
 	std::cout << "Work with " << argv[1];
 	ImageProcessing img_proc_obj(threads);
